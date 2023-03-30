@@ -35,18 +35,16 @@ public class Main {
         bookTitles.add("Над пропастью во ржи");
         bookTitles.add("Атлантида");
         bookTitles.add("Гордость и предубеждения");
-        bookTitles.add("Атлантида");
+        bookTitles.add("Спарта");
 
 
 
         // Вызов метода
-        //Collections.sort(bookTitles);
-        //System.out.println(bookTitles);
-        System.out.println(bookTitles.size());
-        System.out.println(distributeBooks(bookTitles));
-        System.out.println(distributeBooks2(bookTitles));
-
-
+        Collections.sort(bookTitles);
+        System.out.println(bookTitles);
+        //System.out.println(bookTitles.size());
+        //System.out.println(distributeBooks(bookTitles));
+        //System.out.println(distributeBooks2(bookTitles));
 
     }
 
@@ -125,7 +123,7 @@ public class Main {
             }
                 //Добавить оставшиеся книги на последнюю полку
                 for (int a = n; a < bookTitles.size(); a++){
-                    shelves.get(AMOUNT_OF_SHELVES - 1).add(bookTitles.get(n));
+                    shelves.get(AMOUNT_OF_SHELVES - 1).add(bookTitles.get(a));
                 }
         }
         return shelves;
